@@ -32,8 +32,6 @@ import java.util.HashMap;
 import java.util.Vector;
 
 /**
- * {@hide}
- *
  * <p>The state machine defined here is a hierarchical state machine which processes messages
  * and can have states arranged hierarchically.</p>
  *
@@ -60,7 +58,7 @@ import java.util.Vector;
 <code>
         mP1
        /   \
-      mS2   mS1 ----> initial state
+      mS2   mS1 ----&gt; initial state
 </code>
  * <p>After the state machine is created and started, messages are sent to a state
  * machine using <code>sendMessage</code> and the messages are created using
@@ -86,7 +84,7 @@ import java.util.Vector;
  * call <code>onQuiting</code> and then exit Thread/Loopers.</p>
  *
  * <p>In addition to <code>processMessage</code> each <code>State</code> has
- * an <code>enter</code> method and <code>exit</exit> method which may be overridden.</p>
+ * an <code>enter</code> method and <code>exit</code> method which may be overridden.</p>
  *
  * <p>Since the states are arranged in a hierarchy transitioning to a new state
  * causes current states to be exited and new states to be entered. To determine
@@ -116,7 +114,7 @@ import java.util.Vector;
        /   \
       mS2   mS1
      /  \    \
-    mS3  mS4  mS5  ---> initial state
+    mS3  mS4  mS5  ---&gt; initial state
 </code>
  * <p>After starting mS5 the list of active states is mP0, mP1, mS1 and mS5.
  * So the order of calling processMessage when a message is received is mS5,
@@ -442,7 +440,6 @@ public class StateMachine {
 
     /**
      * StateMachine logging record.
-     * {@hide}
      */
     public static class LogRec {
         private StateMachine mSm;

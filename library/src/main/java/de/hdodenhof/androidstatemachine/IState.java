@@ -19,8 +19,6 @@ package de.hdodenhof.androidstatemachine;
 import android.os.Message;
 
 /**
- * {@hide}
- *
  * The interface for implementing states in a {@link StateMachine}
  */
 public interface IState {

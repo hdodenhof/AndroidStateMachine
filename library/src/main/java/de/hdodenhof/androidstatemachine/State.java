@@ -19,8 +19,6 @@ package de.hdodenhof.androidstatemachine;
 import android.os.Message;
 
 /**
- * {@hide}
- *
  * The class for implementing states in a StateMachine
  */
 public class State implements IState {
@@ -63,7 +61,7 @@ public class State implements IState {
      * want to provide a setName or some other mechanism for setting
      * another name if the class name is not appropriate.
      *
-     * @see com.android.internal.util.IState#processMessage(android.os.Message)
+     * @see de.hdodenhof.androidstatemachine.IState#processMessage(android.os.Message)
      */
     @Override
     public String getName() {
